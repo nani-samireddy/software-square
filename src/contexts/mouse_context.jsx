@@ -21,8 +21,8 @@ export default function mouseContextProvider({ children }) {
   const variants = {
     initial: {
       opacity: 0,
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
+      x: mousePosition.x - 8,
+      y: mousePosition.y - 8,
       transition: {
         duration: 0.1,
       },
@@ -30,20 +30,20 @@ export default function mouseContextProvider({ children }) {
 
     default: {
       opacity: 1,
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
+      x: mousePosition.x - 8,
+      y: mousePosition.y - 8,
       transition: {
         duration: 0.1,
       },
     },
     text: {
       opacity: 1,
-      scale: 2,
+      scale: 5,
       transition: {
         duration: 0.1,
       },
-      x: mousePosition.x - 16,
-      y: mousePosition.y - 16,
+      x: mousePosition.x - 8,
+      y: mousePosition.y - 8,
       backgroundColor: "white",
       mixBlendMode: "difference",
     },
