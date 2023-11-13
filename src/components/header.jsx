@@ -12,8 +12,8 @@ export default function Header() {
       <Navbar />
       <div className="h-[80vh]  w-full text-center flex items-center justify-center flex-col">
         <MotionH1>SOFTWARE SQUARE</MotionH1>
-        <MotionP className="text-lg ">
-          We craft your needs into fine softwares.
+        <MotionP styles="text-lg lg:text-xl">
+          We craft your ideas into fine softwares.
         </MotionP>
       </div>
     </>
