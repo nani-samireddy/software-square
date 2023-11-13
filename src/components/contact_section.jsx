@@ -6,7 +6,7 @@ export default function ContactSection() {
   const { mouseTextEnter, mouseTextLeave } = useMouseContext();
   return (
     <div>
-      <h1 className="text-6xl text-center text-gray-300 font-black py-2">
+      <h1 className="text-left  text-7xl md:text-center text-gray-300 font-black py-2">
         Connect With Us
       </h1>
       <form
@@ -14,7 +14,7 @@ export default function ContactSection() {
         method="post"
         className=" flex flex-col justify-center items-center h-auto"
       >
-        <div className="w-[40vw] py-10 flex flex-col gap-6">
+        <div className="w-[80vw] lg:w-[40vw] py-10 flex flex-col gap-6">
           <Input
             type="name"
             label="Name"
