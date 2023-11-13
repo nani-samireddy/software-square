@@ -10,8 +10,9 @@ export default function Homepage() {
       <div className="px-[2%] md:px-[5%] lg:px-[10%] py-3 md:py-6 font-dmSans">
         <Header />
         <WorkSection />
-        <div className="h-60"></div>
+        <div className="h-40"></div>
         <ServicesSection />
+        <div className="h-40"></div>
         <ContactSection />
       </div>
       <Cursor />
