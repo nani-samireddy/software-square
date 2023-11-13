@@ -36,7 +36,6 @@ export default function mouseContextProvider({ children }) {
         duration: 0.1,
       },
       backgroundColor: "black",
-      mixBlendMode: "difference",
     },
     text: {
       opacity: 1,
