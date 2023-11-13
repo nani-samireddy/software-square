@@ -4,6 +4,7 @@ import MotionP from "./motion_p";
 import { workData } from "../constants/work_data";
 import { motion } from "framer-motion";
 import MotionH1 from "./motion_h1";
+import WorkCard from "./work_card";
 
 export default function WorkSection() {
   return (
@@ -12,18 +13,7 @@ export default function WorkSection() {
       <Divider />
       {workData.map((work) => (
         <>
-          <div
-            key={work.key}
-            className="py-8 md:py-0 flex justify-between items-center"
-          >
-            <MotionH1 styles="font-bold text-xl md:text-2xl lg:text-5xl pl-5">
-              {work.title}
-            </MotionH1>
-            <motion.img
-              className="hidden md:block w-auto h-40 object-cover "
-              src={work.images[0]}
-            />
-          </div>
+          <WorkCard work={work} />
           <Divider />
         </>
       ))}
