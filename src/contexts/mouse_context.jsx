@@ -7,7 +7,7 @@ export const useMouseContext = () => {
 };
 
 export default function mouseContextProvider({ children }) {
-  const [mousePosition, setMousePosition] = useState({ x: 400, y: 400 });
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [cursorVariant, setCursorVariant] = useState("default");
   useEffect(() => {
     const mouseMove = (e) => {
