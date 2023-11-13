@@ -19,7 +19,17 @@ export default function mouseContextProvider({ children }) {
     };
   }, []);
   const variants = {
+    initial: {
+      opacity: 0,
+      x: mousePosition.x - 16,
+      y: mousePosition.y - 16,
+      transition: {
+        duration: 0.1,
+      },
+    },
+
     default: {
+      opacity: 1,
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
       transition: {
@@ -27,6 +37,7 @@ export default function mouseContextProvider({ children }) {
       },
     },
     text: {
+      opacity: 1,
       scale: 2,
       transition: {
         duration: 0.1,

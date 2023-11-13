@@ -4,7 +4,7 @@ import MouseContextProvider from "./contexts/mouse_context.jsx";
 
 export default function App() {
   return (
-    <div className=" ">
+    <div className=" overflow-x-hidden">
       <NextUIProvider>
         <MouseContextProvider>
           <Homepage />
