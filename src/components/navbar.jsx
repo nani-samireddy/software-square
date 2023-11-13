@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import MotionP from "./motion_p";
 import MotionH1 from "./motion_h1";
+import { motion } from "framer-motion";
 import { useMouseContext } from "../contexts/mouse_context";
+import { containerVariants, itemVariants } from "../constants/varients";
 
 export default function Navbar() {
   const { mouseTextEnter, mouseTextLeave } = useMouseContext();
@@ -13,7 +15,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex justify-between items-center relative">
+    <motion.div className="flex justify-between items-center relative">
       <MotionH1 styles="font-bold ">SSQUARE</MotionH1>
       <ul className="hidden md:flex items-center justify-center gap-9">
         <MotionP>WORK</MotionP>
@@ -44,38 +46,51 @@ export default function Navbar() {
           />
         </svg>
       </div>
-      {isMobileNavOpen && (
-        <div className="fixed top-0 left-0 bg-black text-white w-full h-[100vh]">
-          <div
-            className="fixed right-0 p-20"
-            onMouseEnter={mouseTextEnter}
-            onMouseLeave={mouseTextLeave}
-            onClick={handleMobileNav}
+
+      <motion.div
+        variants={containerVariants}
+        animate={isMobileNavOpen ? "visible" : "hidden"}
+        initial="hidden"
+        className={` fixed top-0 left-0 bg-black text-white w-full h-[100vh]`}
+      >
+        <motion.div
+          className="fixed right-0 p-20"
+          onMouseEnter={mouseTextEnter}
+          onMouseLeave={mouseTextLeave}
+          onClick={handleMobileNav}
+          variants={itemVariants}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-10 w-10 cursor-pointer"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10 cursor-pointer"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                className="text-white"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </div>
-          <ul className="flex flex-col items-center justify-center gap-9 h-full">
-            <MotionP styles="text-3xl ">WORK</MotionP>
-            <MotionP styles="text-3xl ">SERVICES</MotionP>
-            <MotionP styles="text-3xl ">ABOUT</MotionP>
-            <MotionP styles="text-3xl ">CONTACT</MotionP>
-          </ul>
-        </div>
-      )}
-    </div>
+            <path
+              className="text-white"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </motion.div>
+        <ul className="flex flex-col items-center justify-center gap-9 h-full">
+          <MotionP varients={itemVariants} styles="text-3xl ">
+            WORK
+          </MotionP>
+          <MotionP varients={itemVariants} styles="text-3xl ">
+            SERVICES
+          </MotionP>
+          <MotionP varients={itemVariants} styles="text-3xl ">
+            ABOUT
+          </MotionP>
+          <MotionP varients={itemVariants} styles="text-3xl ">
+            CONTACT
+          </MotionP>
+        </ul>
+      </motion.div>
+    </motion.div>
   );
 }

@@ -35,7 +35,6 @@ export default function mouseContextProvider({ children }) {
       transition: {
         duration: 0.1,
       },
-      backgroundColor: "black",
     },
     text: {
       opacity: 1,
