@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <>
       <Navbar />
-      <div className="h-[90vh] w-full text-center flex items-center justify-center flex-col">
+      <div className="h-[80vh] md:h-[90vh] w-full text-center flex items-center justify-center flex-col">
         <MotionH1>SOFTWARE SQUARE</MotionH1>
         <MotionP className="text-lg ">
           We craft your needs into fine softwares.
