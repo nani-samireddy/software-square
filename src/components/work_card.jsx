@@ -22,7 +22,7 @@ export default function WorkCard({ work }) {
         src={work.images[0]}
       />
       <div className="flex items-center justify-between w-full">
-        <MotionP styles="text-lg font-semi-bold md:text-xl lg:text-2xl pl-5">
+        <MotionP styles="text-lg font-semi-bold md:text-xl lg:text-2xl pl-5 cursor-pointer hover:font-bold">
           {work.title}
         </MotionP>
         <div className="flex">
