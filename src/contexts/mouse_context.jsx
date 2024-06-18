@@ -9,6 +9,7 @@ export const useMouseContext = () => {
 export default function mouseContextProvider({ children }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [cursorVariant, setCursorVariant] = useState("default");
+  const [currentSymbol, setCurrentSymbol] = useState("");
   useEffect(() => {
     const mouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -26,6 +27,7 @@ export default function mouseContextProvider({ children }) {
       transition: {
         duration: 0.1,
       },
+      fontSize: "10px",
     },
 
     default: {
@@ -47,9 +49,21 @@ export default function mouseContextProvider({ children }) {
       backgroundColor: "white",
       mixBlendMode: "difference",
     },
+    image: {
+      opacity: 1,
+      scale: 3.5,
+      transition: {
+        duration: 0.1,
+      },
+      backgroundColor: "transparent",
+      x: mousePosition.x - 8,
+      y: mousePosition.y - 8,
+    }
   };
   const mouseTextEnter = () => setCursorVariant("text");
   const mouseTextLeave = () => setCursorVariant("default");
+  const mouseImageEnter = () => { setCurrentSymbol('VISIT 👀'); setCursorVariant("image") };
+  const mouseImageLeave = () => { setCurrentSymbol(''); setCursorVariant("default"); }
 
   return (
     <mouseContext.Provider
@@ -58,7 +72,11 @@ export default function mouseContextProvider({ children }) {
         variants,
         mouseTextEnter,
         mouseTextLeave,
+        mouseImageEnter,
+        mouseImageLeave,
         cursorVariant,
+        currentSymbol,
+
       }}
     >
       {children}

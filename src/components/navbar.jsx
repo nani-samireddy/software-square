@@ -15,11 +15,12 @@ export default function Navbar() {
   };
 
   return (
-    <motion.div className="flex justify-between items-center relative">
+    <motion.div className="flex justify-between items-center relative ">
       <MotionH1 styles="font-bold ">SSQUARE</MotionH1>
       <ul className="hidden md:flex items-center justify-center gap-9">
-        <MotionP>WORK</MotionP>
+        <MotionP styles={"hover:font-bold"}>WORK</MotionP>
         <MotionP>SERVICES</MotionP>
+        <MotionP>TEAM</MotionP>
         <MotionP>ABOUT</MotionP>
         <MotionP>CONTACT</MotionP>
       </ul>
