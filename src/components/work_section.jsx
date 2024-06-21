@@ -9,7 +9,7 @@ import { siteData } from "../data";
 
 export default function WorkSection() {
   return (
-    <div>
+    <div id="work_section">
       <MotionP styles={"py-3 w-max"}>[Recent works]</MotionP>
       <Divider />
       {siteData.work.map((work) => (

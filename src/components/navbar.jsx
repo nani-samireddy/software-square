@@ -18,11 +18,11 @@ export default function Navbar() {
     <motion.div className="flex justify-between items-center relative ">
       <MotionH1 styles="font-bold ">SSQUARE</MotionH1>
       <ul className="hidden md:flex items-center justify-center gap-9">
-        <MotionP styles={"transition-all duration-150 hover:scale-150"}>WORK</MotionP>
-        <MotionP styles={"transition-all duration-150 hover:scale-150"}>SERVICES</MotionP>
-        <MotionP styles={"transition-all duration-150 hover:scale-150"}>TEAM</MotionP>
-        <MotionP styles={"transition-all duration-150 hover:scale-150"}>ABOUT</MotionP>
-        <MotionP styles={"transition-all duration-150 hover:scale-150"}>CONTACT</MotionP>
+        <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="#work_section">WORK</a></MotionP>
+        <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="#services_section">SERVICES</a></MotionP>
+        <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="#team_section">TEAM</a></MotionP>
+        <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="#about_section">ABOUT</a></MotionP>
+        <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="#contact_section">CONTACT</a></MotionP>
       </ul>
       {/* mobile nav */}
       <div

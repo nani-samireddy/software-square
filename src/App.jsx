@@ -4,7 +4,7 @@ import MouseContextProvider from "./contexts/mouse_context.jsx";
 
 export default function App() {
   return (
-    <div className=" overflow-x-hidden antialiased">
+    <div className=" overflow-x-hidden antialiased scroll-smooth">
       <NextUIProvider>
         <MouseContextProvider>
           <Homepage />
