@@ -10,14 +10,14 @@ export default function WorkPage() {
 
     return (
         <>
-            <div className="h-[50vh] flex flex-col items-start justify-center min-w-min my-10">
-                <MotionH1 styles={"font-bold text-5xl leading-loose"}>{work.title}</MotionH1>
-                <MotionP styles="w-[60%] text-xl leading-relaxed">{work.workDescription}</MotionP>
+            <div className="h-[50vh] flex flex-col items-center text-center lg:text-left lg:items-start justify-center min-w-min my-10">
+                <MotionH1 styles={"font-bold text-2xl lg:text-5xl leading-loose lg:py-6"}>{work.title}</MotionH1>
+                <MotionP styles="w-[60%] text-sm lg:text-xl leading-relaxed">{work.workDescription}</MotionP>
                 <MotionMask
                     initialChild={
                         <>
                             {work.techStack.map((tech, index) => (
-                                <span key={index} className={`text-sm  py-1 px-3 rounded-large ${techStackColors[tech].backgroundColor} ${techStackColors[tech].textColor} pointer-events-none`} >
+                                <span key={index} className={`text-xs lg:text-sm  py-1 px-3 rounded-large ${techStackColors[tech].backgroundColor} ${techStackColors[tech].textColor} pointer-events-none`} >
                                     {tech}
                                 </span>
                             ))}
@@ -27,7 +27,7 @@ export default function WorkPage() {
                         <>
                             {
                                 work.techStack.map((tech, index) => (
-                                    <span key={index} className={`text-sm opacity-20 py-1 px-3 rounded-large ${techStackColors[tech].backgroundColor} ${techStackColors[tech].textColor}`} >
+                                    <span key={index} className={` text-xs lg:text-sm opacity-20 py-1 px-3 rounded-large ${techStackColors[tech].backgroundColor} ${techStackColors[tech].textColor}`} >
                                         {tech}
                                     </span>
                                 ))

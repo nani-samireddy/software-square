@@ -10,14 +10,14 @@ export default function MotionMask({ initialChild, maskChild }) {
     const handleMouseMove = (event) => {
         const rect = event.target.getBoundingClientRect();
         const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
+        const y = event.clientY - rect.top;
         setCursorPosition({ x, y });
     };
     return (
         <div className="relative h-min">
             <motion.div
                 onMouseMove={handleMouseMove}
-                className="h-min flex flex-wrap gap-2 masking-cursor py-10"
+                className="h-min flex flex-wrap gap-2 masking-cursor py-5 lg:py-8"
                 onMouseEnter={mouseTechChipEnter}
                 onMouseLeave={mouseTechChipLeave}
                 animate={{
@@ -30,7 +30,7 @@ export default function MotionMask({ initialChild, maskChild }) {
             >
                 {initialChild}
             </motion.div>
-            <div className="h-min flex flex-wrap gap-2 py-10 pointer-events-none">
+            <div className="h-min flex flex-wrap gap-2 py-5 lg:py-8 pointer-events-none">
                 {maskChild}
             </div>
         </div>
