@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <motion.div className="flex justify-between items-center relative ">
-      <MotionH1 styles="font-bold ">SSQUARE</MotionH1>
+      <MotionH1 styles="font-bold "><a href="/">SSQUARE</a></MotionH1>
       <ul className="hidden md:flex items-center justify-center gap-9">
         <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="#work_section">WORK</a></MotionP>
         <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="#services_section">SERVICES</a></MotionP>
@@ -79,16 +79,19 @@ export default function Navbar() {
         </motion.div>
         <ul className="flex flex-col items-center justify-center gap-9 h-full">
           <MotionP varients={itemVariants} styles="text-3xl ">
-            WORK
+            <a href="#work_section">WORK</a>
           </MotionP>
           <MotionP varients={itemVariants} styles="text-3xl ">
-            SERVICES
+            <a href="#services_section">SERVICES</a>
           </MotionP>
           <MotionP varients={itemVariants} styles="text-3xl ">
-            ABOUT
+            <a href="/team">TEAM</a>
           </MotionP>
           <MotionP varients={itemVariants} styles="text-3xl ">
-            CONTACT
+            <a href="#about">ABOUT</a>
+          </MotionP>
+          <MotionP varients={itemVariants} styles="text-3xl ">
+            <a href="#contact_section">CONTACT</a>
           </MotionP>
         </ul>
       </motion.div>
