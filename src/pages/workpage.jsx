@@ -27,7 +27,7 @@ export default function WorkPage() {
                         <>
                             {
                                 work.techStack.map((tech, index) => (
-                                    <span key={index} className={` text-xs lg:text-sm opacity-20 py-1 px-3 rounded-large ${techStackColors[tech].backgroundColor} ${techStackColors[tech].textColor}`} >
+                                    <span key={index} className={` text-xs lg:text-sm opacity-70 lg:opacity-10 py-1 px-3 rounded-large ${techStackColors[tech].backgroundColor} ${techStackColors[tech].textColor}`} >
                                         {tech}
                                     </span>
                                 ))
