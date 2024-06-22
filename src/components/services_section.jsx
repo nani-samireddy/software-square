@@ -1,8 +1,5 @@
 import { Divider } from "@nextui-org/react";
 import MotionP from "./motion_p";
-import { workData } from "../constants/work_data";
-import { motion } from "framer-motion";
-import MotionH1 from "./motion_h1";
 import { servicesData } from "../constants/services_data";
 import ServiceCard from "./service_card";
 

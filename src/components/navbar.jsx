@@ -20,8 +20,8 @@ export default function Navbar() {
       <ul className="hidden md:flex items-center justify-center gap-9">
         <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="#work_section">WORK</a></MotionP>
         <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="#services_section">SERVICES</a></MotionP>
-        <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="#team_section">TEAM</a></MotionP>
-        <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="#about_section">ABOUT</a></MotionP>
+        <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="/team">TEAM</a></MotionP>
+        <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="#about">ABOUT</a></MotionP>
         <MotionP styles={"transition-all duration-150 hover:scale-150"}><a href="#contact_section">CONTACT</a></MotionP>
       </ul>
       {/* mobile nav */}

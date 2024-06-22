@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="flex flex-wrap items-center gap-10 justify-center ">
+    <div className="flex flex-wrap items-center gap-10 justify-center py-14">
       <svg
         width="20"
         height="20"

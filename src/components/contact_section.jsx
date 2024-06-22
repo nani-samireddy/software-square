@@ -6,7 +6,7 @@ export default function ContactSection() {
   const { mouseTextEnter, mouseTextLeave } = useMouseContext();
   return (
     <div id="contact_section">
-      <h1 className="text-4xl md:text-7xl text-center text-gray-300 font-black py-2">
+      <h1 className="text-4xl md:text-7xl text-center text-gray-300 font-black">
         Connect With Us
       </h1>
       <form
